@@ -36,6 +36,12 @@ public class WordDocument {
         words.add(word);
     }
 
+    public void removeLast() {
+        if (!words.isEmpty()) {
+            words.remove(words.size() - 1);
+        }
+    }
+
     public void display() {
         String result = String.join(" ", words);
         System.out.println(result);

@@ -13,6 +13,8 @@ public class AddTextCommand extends Command {
 
 
     // Constructors
+    // --------------------------------------------------------
+    
     public AddTextCommand(String text, WordDocument document) {
         this.textElement = text;
         this.wordDocument = document;
@@ -20,11 +22,16 @@ public class AddTextCommand extends Command {
 
 
     // Abstract Methods
-    // -------------------------------------------
-
+    // --------------------------------------------------------
+    
     @Override
     public void execute() {
         wordDocument.add(textElement);
+    }
+
+    @Override
+    public void undo() {
+        wordDocument.removeLast();
     }
 
 }

@@ -12,17 +12,24 @@ public class DisplayTextCommand extends Command {
 
 
     // Constructors
+    // -----------------------------------------------
+
     public DisplayTextCommand(WordDocument document) {
         this.wordDocument = document;
     }
 
 
     // Abstract Methods
-    // -------------------------------------------
+    // -----------------------------------------------
 
     @Override
     public void execute() {
         wordDocument.display();
+    }
+
+    @Override
+    public void undo() {
+        // Nothing to undo
     }
 
 }
