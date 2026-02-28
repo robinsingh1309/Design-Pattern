@@ -27,7 +27,8 @@ public class MementoPatternDemo {
 
         // Switching / rollback to previous snapshot of object
         ConfigMemento memento = careTaker.getMemento(0);
-
+        originator.restore(memento);
+        
         System.out.println("Restored state: " + memento);
     }
 
